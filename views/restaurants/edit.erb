@@ -1,77 +1,51 @@
-<h1>Challenges</h1>
+<h1>restaurants</h1>
 
-<form action="/challenge/<%= @challenge.id %>" method="post" >
+<form action="/restaurants/<%= @restaurant.id %>" method="post" >
   
   <label>
     name:
     <input type="text"
      name="name"
-     value="<%= @challenge.name %>"
+     value="<%= @restaurant.name %>"
     />
   </label>
 
   <label>
-    info:
+    location:
     <input type="text"
-     name="info"
-     value="<%= @challenge.info %>"
+     name="location"
+     value="<%= @restaurant.location %>"
     />
   </label>
 
   <label>
-    deal:
-    <select name="deal">
-    <option <%= "selected" if @challenge.deal == "Eat for free" %>
-     value="Eat for free">Eat for free</option>
-    <option <%= "selected" if @challenge.deal == "free tshirt" %>
-    value="free tshirt">free tshirt</option>
-    <option <%= "selected" if @challenge.deal == "picture on hall of fame" %>
-    value="picture on hall of fame">picture on hall of fame</option>
-    <option <%= "selected" if @challenge.deal == "free dessert" %>
-    value="free dessert">free dessert</option>
-
-    </select>
+    website:
+    <input type="text"
+     name="website"
+     value="<%= @restaurant.website %>"
+    />
   </label>
   
   <label>
-    day:
-    <select name="day">
-    <option <%= "selected" if @challenge.day == "Monday" %>
-     value="Monday">Monday</option>
-    <option <%= "selected" if @challenge.day == "Tuesday" %>
-    value="Tuesday">Tuesday</option>
-    <option <%= "selected" if @challenge.day == "Wednesday" %>
-    value="Wednesday">Wednesday</option>
-    <option <%= "selected" if @challenge.day == "Thursday" %>
-    value="Thursday">Thursday</option>
-   <option <%= "selected" if @challenge.day == "Friday" %>
-   value="Friday">Friday</option>
-   <option <%= "selected" if @challenge.day == "Saturday" %>
-   value="Saturday">Saturday</option>
-   <option <%= "selected" if @challenge.day == "Sunday" %>
-   value="Sunday">Sunday</option>
-    </select>
+    directions:
+    <input type="text"
+     name="directions"
+     value="<%= @restaurant.directions %>"
+    />
   </label>
 
   <label>
-    food_type:
-    <select name="food_type">
-    <option <%= "selected" if @challenge.food_type == "Burger" %>
-     value="Burger">Burger</option>
-    <option <%= "selected" if @challenge.food_type == "Wings" %>
-    value="Wings">Wings</option>
-    <option <%= "selected" if @challenge.food_type == "Curry" %>
-    value="Curry">Curry</option>
-    <option <%= "selected" if @challenge.food_type == "Pizza" %>
-    value="Pizza">Pizza</option>
-   
-    </select>
+    number:
+    <input type="text"
+     name="number"
+     value="<%= @restaurant.number %>"
+    />
   </label>
 
 
 
 
-  <input type="submit" value="Update challenge"/>
+  <input type="submit" value="Update restaurants"/>
 </form>
 
 

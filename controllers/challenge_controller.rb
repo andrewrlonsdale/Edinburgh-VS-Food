@@ -8,12 +8,12 @@ require_relative('../models/challenge')
 # get all challenges
 get '/challenges' do
   @challenges = Challenge.all()
-  erb(:"challenge/index")
+  erb(:"challenges/index")
 end
 
 # new challenge form
 get '/challenges/new' do
-  erb(:"challenge/new")
+  erb(:"challenges/new")
 end
 
 # actually make a challenge

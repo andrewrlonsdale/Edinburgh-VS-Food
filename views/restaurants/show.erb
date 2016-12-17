@@ -1,11 +1,11 @@
-<p>name: <%= @challenge.name()%></p>
-<p>info: <%= @challenge.info()%></p>
-<p>deal: <%= @challenge.deal()%></p>
-<p>day: <%= @challenge.day()%></p>
-<p>food_type: <%= @challenge.food_type()%></p>
+<p>name: <%= @restaurant.name()%></p>
+<p>location: <%= @restaurant.location()%></p>
+<p>website: <%= @restaurant.website()%></p>
+<p>directions: <%= @restaurant.directions()%></p>
+<p>number: <%= @restaurant.number()%></p>
 
-<a href="/challenge/<%= @challenge.id %>/edit">Edit challenge</a>
+<a href="/restaurants/<%= @restaurant.id %>/edit">Edit restaurants</a>
 
-<form action="/challenge/<%= @challenge.id %>/delete" method="post">
+<form action="/restaurants/<%= @restaurant.id %>/delete" method="post">
 <input type="submit" value="Delete"/>
 </form>

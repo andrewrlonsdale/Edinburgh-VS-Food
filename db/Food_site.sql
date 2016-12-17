@@ -6,15 +6,15 @@ CREATE TABLE challenge (
   name varchar(255),
   info varchar(255),
   deal varchar(255),
-  day varchar(2255),
+  day varchar(255),
   food_type varchar(255)
 );
 
 CREATE TABLE restaurant (
   id serial4 primary key,
   name varchar(255),
-  location varchar,
-  website url,
+  location varchar(255),
+  website TEXT,
   directions varchar(255),
-  number int4  
+  number varchar(255)  
 );

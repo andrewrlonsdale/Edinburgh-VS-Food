@@ -1,14 +1,13 @@
-
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry' )
-require_relative('../models/restaurants')
+require_relative('../models/restaurant')
 
 
 
 # get all restaurants
 get '/restaurants' do
-  @restaurants = Restaurants.all()
+  @restaurants = Restaurant.all()
   erb(:"restaurants/index")
 end
 
@@ -19,8 +18,8 @@ end
 
 # actually make a restaurants
 post '/restaurants' do
-  @restaurants = Restaurants.new(params)
-  @restaurants.save()
+  @restaurant = Restaurant.new(params)
+  @restaurant.save()
   erb(:"restaurants/create")
 end
 
@@ -28,26 +27,26 @@ end
 # show
 get '/restaurants/:id' do
   id = params[:id]
-  @restaurants = Restaurants.find(id)
+  @restaurant = Restaurant.find(id)
   erb(:"restaurants/show")
 end
 
 # get edit restaurants form
 get '/restaurants/:id/edit' do
-  @restaurants = Restaurants.find(params[:id])
+  @restaurant = Restaurant.find(params[:id])
   erb(:"restaurants/edit")
 end
 
 # actually update a restaurants by ID put
 post '/restaurants/:id' do
-  Restaurants.update(params)
+  Restaurant.update(params)
   redirect to "/restaurants/#{params[:id]}"
 end
 
 # delete a restaurants by ID 
 # delete
 post '/restaurants/:id/delete' do
-  Restaurants.destroy( params[:id])
+  Restaurant.destroy( params[:id])
   redirect to ('/restaurants')
 end
 
