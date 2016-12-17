@@ -1,0 +1,11 @@
+<h1>challenges</h1>
+<p><a href="/challenge/new">New challenge</a></p>
+
+<% for challenge in @challenges %>
+<p>Name: <%= challenge.name()%></p>
+<p>Deal: <%= challenge.deal()%> </p>
+<p>Day: <%= challenge.day() %></p>
+<p>Food type: <%= challenge.food_type() %></p>
+<p><a href="/challenge/<%= challenge.id %>" >Show challenge</a></p>
+<hr>
+<% end %>

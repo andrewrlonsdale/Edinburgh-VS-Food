@@ -1,0 +1,11 @@
+<p>name: <%= @challenge.name()%></p>
+<p>info: <%= @challenge.info()%></p>
+<p>deal: <%= @challenge.deal()%></p>
+<p>day: <%= @challenge.day()%></p>
+<p>food_type: <%= @challenge.food_type()%></p>
+
+<a href="/challenge/<%= @challenge.id %>/edit">Edit challenge</a>
+
+<form action="/challenge/<%= @challenge.id %>/delete" method="post">
+<input type="submit" value="Delete"/>
+</form>
