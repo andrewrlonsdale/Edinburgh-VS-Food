@@ -6,6 +6,13 @@
     name:
     <input type="text" name="name"/>
   </label>
+  <label>
+    Restaurant: 
+    <select class = "restaurant_select" name = "restaurant_id">
+    <option selected disabled> Select </option><% for restaurant in @restaurants%> <option value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
+    <% end %>
+     </select>
+   </label>
 
   <label>
     info:

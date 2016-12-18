@@ -4,12 +4,22 @@
   
   <label>
     name:
-    <input type="text"
-     name="name"
+    <input type="text" name="name"
      value="<%= @challenge.name %>"
     />
   </label>
 
+  <label>
+  Restaurant:
+    <select name = "restaurant_id">
+      <% for restaurant in @restaurants %>
+        <option <%= "selected" if restaurant.name == @challenge.restaurant["name"] %>
+        value = "<%= restaurant.id %>" > <%= restaurant.name %> </option>
+      <% end %>
+    </select>
+
+
+  </label>
   <label>
     info:
     <input type="text"
@@ -71,7 +81,7 @@
 
 
 
-  <input type="submit" value="Update challenges"/>
+  <input type="submit" value="Update"/>
 </form>
 
 

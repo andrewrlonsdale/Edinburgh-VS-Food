@@ -2,17 +2,21 @@ require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry' )
 require_relative('../models/challenge')
+require_relative('../models/restaurant')
 
 
 
 # get all challenges
 get '/challenges' do
+  @restaurants = Restaurant.all()
   @challenges = Challenge.all()
   erb(:"challenges/index")
 end
 
 # new challenge form
 get '/challenges/new' do
+  @restaurants = Restaurant.all()
+  @challenges = Challenge.all()
   erb(:"challenges/new")
 end
 
@@ -33,6 +37,7 @@ end
 
 # get edit challenge form
 get '/challenges/:id/edit' do
+  @restaurants = Restaurant.all()
   @challenge = Challenge.find(params[:id])
   erb(:"challenges/edit")
 end

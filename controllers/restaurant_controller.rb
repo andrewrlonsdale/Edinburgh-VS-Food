@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry' )
+require_relative('../models/challenge')
 require_relative('../models/restaurant')
 
 
@@ -49,4 +50,11 @@ post '/restaurants/:id/delete' do
   Restaurant.destroy( params[:id])
   redirect to ('/restaurants')
 end
+
+get '/restaurants/:id/challenges' do
+  @restaurant = Restaurant.find(params[:id])
+  @burgers = @restaurant.burgers()
+  erb(:"restaurants/show")
+end
+
 

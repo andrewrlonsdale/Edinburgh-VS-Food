@@ -2,11 +2,13 @@ require_relative('../db/sql_runner')
 
 class Challenge
 
-  attr_reader( :name, :info, :deal, :day, :food_type, :id )
+  attr_accessor( :name, :restaurant_idea, :info, :deal, :day, :food_type )
+  attr_reader :id 
 
   def initialize( options )
     @id = nil || options['id'].to_i
     @name = options['name'].to_s
+    @restaurant_id = options ["restaurant_id"]
     @info = options['info'].to_s
     @deal = options['deal'].to_s
     @day = options['day'].to_s
@@ -15,8 +17,8 @@ class Challenge
 
   def save()
     sql = "INSERT INTO challenge (
-    name,info,deal,day,food_type ) VALUES 
-    ('#{ @name }','#{ @info }','#{ @deal }','#{ @day }','#{@food_type}') 
+    name, restaurant_id, info,deal,day,food_type ) VALUES 
+    ('#{ @name }', #{@restaurant_id},'#{ @info }','#{ @deal }','#{ @day }','#{@food_type}') 
     RETURNING *"
     food_data = SqlRunner.run(sql)
     @id = food_data.first()['id'].to_i
@@ -40,6 +42,7 @@ class Challenge
   def self.update( options )
     sql = "UPDATE challenge SET
     name='#{options['name']}',
+    restaurant_id = '#{options['restaurant_id']}',
     info='#{options['info']}',
     deal='#{options['deal']}',
     day='#{options['day']}',
@@ -57,6 +60,12 @@ class Challenge
     challenges = SqlRunner.run(sql)
     result = challenges.map { |challenge| Challenge.new(challenge)}
     return result
+  end
+
+  def restaurant()
+    sql = "SELECT * FROM restaurant WHERE id = #{@restaurant_id};"
+    result = SqlRunner.run(sql)
+    return result[0]
   end
 
 

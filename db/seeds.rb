@@ -3,6 +3,7 @@ require_relative('../models/restaurant')
 
 challenge1 = Challenge.new({
   "name" => "epic eat",
+  "restaurant_id" => restaurant1.id,
   "info" => "50 wings",
   "deal" => "eat for free",
   "day" => "monday",
@@ -13,6 +14,7 @@ challenge1 = Challenge.new({
 
 challenge2 = Challenge.new({
   "name" => "ring of fire",
+  "restaurant_id" => restaurant2.id,
   "info" => "very hot chili",
   "deal" => "hall of flame",
   "day" => "friday",
