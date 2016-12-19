@@ -1,6 +1,26 @@
 require_relative('../models/challenge')
 require_relative('../models/restaurant')
 
+restaurant1 = Restaurant.new({
+  "name" => "bull",
+  "location" => "china",
+  "website" => "www.google.com",
+  "directions" => "turn left",
+  "number" => "039232393032"
+  })
+
+
+restaurant2 = Restaurant.new({
+  "name" => "kill",
+  "location" => "bob",
+  "website" => "www.google.com",
+  "directions" => "turn left",
+  "number" => "039232393032"
+  })
+restaurant1.save
+restaurant2.save
+
+
 challenge1 = Challenge.new({
   "name" => "epic eat",
   "restaurant_id" => restaurant1.id,
@@ -25,21 +45,4 @@ challenge1.save
 challenge2.save
 
 
-restaurant1 = Restaurant.new({
-  "name" => "bull",
-  "location" => "china",
-  "website" => "www.google.com",
-  "directions" => "turn left",
-  "number" => "039232393032"
-  })
 
-
-restaurant2 = Restaurant.new({
-  "name" => "kill",
-  "location" => "bob",
-  "website" => "www.google.com",
-  "directions" => "turn left",
-  "number" => "039232393032"
-  })
-restaurant1.save
-restaurant2.save

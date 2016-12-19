@@ -4,8 +4,9 @@
 <% for restaurant in @restaurants %>
 <p>Name: <%= restaurant.name()%></p>
 <p>location: <%= restaurant.location()%> </p>
-<p>website: <%= restaurant.website() %></p>
+<p>website:<a href = "http://<%= restaurant.website()%>"><%= restaurant.website() %></a></p>
 <p>number: <%= restaurant.number() %></p>
 <p><a href="/restaurants/<%= restaurant.id %>" >Show restaurants</a></p>
 <hr>
 <% end %>
+

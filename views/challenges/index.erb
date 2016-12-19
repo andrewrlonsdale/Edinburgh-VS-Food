@@ -3,7 +3,12 @@
 
 <% for challenge in @challenges %>
 <p>Name: <%= challenge.name()%></p>
-<p> <a href = "restaurants/<%= challenge.restaurant["id"] %>"> <%= challenge.restaurant["name"] %> </a> 
+
+<p>restaurant: <a href = "restaurants/
+<%= challenge.restaurant["id"] %>">
+ <%= challenge.restaurant["name"] %>
+</a></p> 
+
 <p>Deal: <%= challenge.deal()%> </p>
 <p>Day: <%= challenge.day() %></p>
 <p>Food type: <%= challenge.food_type() %></p>
