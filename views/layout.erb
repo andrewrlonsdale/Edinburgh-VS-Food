@@ -3,27 +3,26 @@
 <head>
   <title>EDINBURGH VS FOOD</title>
   <link rel = "stylesheet", type = "text/css", href = "/style/style.css"/>
- <link rel="icon" href="/images/edinburgh.png" />
+  <link rel="icon" href="/images/background1.png" />
 </head>
+
 <body>
-<div>
-  <nav>
-    <ul>
-    <li>
-    <a href="/">HOME </a></li>
-      <li>
-        <a href="/challenges">ALL CHALLENGES </a>
-      </li>
-      <li>
-      <a href="/restaurants">ALL RESTAURANTS </a>
-      </li>
-      <li>
-        <a href="/challenges/new">ADD CHALLENGES </a>
-      </li>
-    </ul>
-  </nav>
+  <div class = "header">
+    <div class = "bar">
+      <nav>
+      
+        <a href="/">HOME</a></li>
+        <br>
+        <a href="/challenges">ALL CHALLENGES</a>
+        <br>
+        <a href="/restaurants">ALL RESTAURANTS</a>
+        <br>
+        <a href="/challenges/new">ADD CHALLENGE</a>
+        <br>
+        <a href="/restaurants/new">ADD RESTAURANT</a>
+      </nav>
+    </div>
   </div>
   <%= yield %>
-  
 </body>
 </html>

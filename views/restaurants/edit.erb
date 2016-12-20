@@ -1,53 +1,56 @@
 <h1>restaurants</h1>
 
-<form action="/restaurants/<%= @restaurant.id %>" method="post" >
-  
-  <label>
-    name:
-    <input type="text"
-     name="name"
-     value="<%= @restaurant.name %>"
-    />
-  </label>
+<div class = "form_container">
+  <div class = "form">
+    <form action="/restaurants/<%= @restaurant.id %>" method="post" >
+      
+      <label>
+        name:
+        <input type="text"
+        name="name"
+        value="<%= @restaurant.name %>"
+        />
+      </label>
 
-  <label>
-    location:
-    <input type="text"
-     name="location"
-     value="<%= @restaurant.location %>"
-    />
-  </label>
+      <label>
+        location:
+        <input type="text"
+        name="location"
+        value="<%= @restaurant.location %>"
+        />
+      </label>
 
-  <label>
-    website:
-    <input type="text"
-     name="website"
-     value="<%= @restaurant.website %>"
-    />
-  </label>
-  
-  <label>
-    directions:
-    <input type="text"
-     name="directions"
-     value="<%= @restaurant.directions %>"
-    />
-  </label>
+      <label>
+        website:
+        <input type="text"
+        name="website"
+        value="<%= @restaurant.website %>"
+        />
+      </label>
+      
+      <label>
+        directions:
+        <input type="text"
+        name="directions"
+        value="<%= @restaurant.directions %>"
+        />
+      </label>
 
-  <label>
-    number:
-    <input type="text"
-     name="number"
-     value="<%= @restaurant.number %>"
-    />
-  </label>
-
-
+      <label>
+        number:
+        <input type="text"
+        name="number"
+        value="<%= @restaurant.number %>"
+        />
+      </label>
 
 
-  <input type="submit" value="Update restaurants"/>
-</form>
 
+
+      <input type="submit" value="Update restaurants"/>
+    </form>
+  </div>
+</div>  
 
 
 

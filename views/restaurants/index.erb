@@ -1,12 +1,29 @@
 <h1>restaurants</h1>
-<p><a href="/restaurants/new">New restaurants</a></p>
 
-<% for restaurant in @restaurants %>
-<p>Name: <%= restaurant.name()%></p>
-<p>location: <%= restaurant.location()%> </p>
-<p>website:<a href = "http://<%= restaurant.website()%>"><%= restaurant.website() %></a></p>
-<p>number: <%= restaurant.number() %></p>
-<p><a href="/restaurants/<%= restaurant.id %>" >Show restaurants</a></p>
+
+
+
+<table style="width:100%">
+  <tr>
+    <th>NAME</th> 
+    <th>LOCATION</th>
+    <th>WEBSITE</th>
+    <th>NUMBER</th>
+    
+  </tr>
+
+  <% for restaurant in @restaurants %>
+  <tr>
+    <td><%= restaurant.name()%></td> 
+    <td><%= restaurant.location()%></td>
+    <td><a href = "http://<%= restaurant.website()%>"><%= restaurant.website() %></a></td>
+    <td><%= restaurant.number() %></td>
+    <td><a href="/restaurants/<%= restaurant.id %>" >Show restaurants</a></td>
+    <td><a href = "restaurants/<%=restaurant.id%>/challenges"> See challenges</a></td>
+
+  </tr>
+
+  <% end %>
+</table>
+<br>
 <hr>
-<% end %>
-

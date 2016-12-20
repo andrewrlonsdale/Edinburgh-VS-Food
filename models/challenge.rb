@@ -25,7 +25,7 @@ class Challenge
   end
 
   def self.all()
-    sql = "SELECT * FROM challenge"
+    sql = "SELECT * FROM challenge ORDER BY deal ASC"
     challenges = SqlRunner.run( sql )
     result = challenges.map { |challenge| Challenge.new( challenge ) }
     return result
@@ -54,6 +54,12 @@ class Challenge
   def self.destroy( id )
     sql = "DELETE FROM challenge WHERE id=#{id}"
     SqlRunner.run( sql )
+
+  end
+
+  def self.destroyall()
+    sql = "DELETE * FROM challenge "
+    SqlRunner.run( sql )
   end
 
   def self.get_many(sql)
@@ -68,7 +74,21 @@ class Challenge
     return result[0]
   end
 
+  def self.search_by_restaurant_id(restaurant)
+    sql ="SELECT challenge.* FROM challenge WHERE restaurant_id='#{restaurant}'"
+
+    challenges = SqlRunner.run( sql )
+    result = challenges.map { |challenge| Challenge.new( challenge ) }
+    return result
+  end
+
+  def self.day_sort(day)
+    sql = "SELECT * FROM challenge WHERE day = #{day} "
+    food = SqlRunner.run(sql)
+    result = food.map{|challenge|Challenge.new(challenge)}
+  end
 
 end
+
 
 

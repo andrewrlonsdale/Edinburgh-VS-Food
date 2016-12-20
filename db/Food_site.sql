@@ -4,19 +4,19 @@ DROP TABLE restaurant;
 
 CREATE TABLE restaurant (
   id serial4 primary key,
-  name varchar(255),
-  location varchar(255),
+  name TEXT,
+  location TEXT,
   website TEXT,
-  directions varchar(255),
-  number varchar(255)  
+  directions TEXT,
+  number TEXT
 );
 
 CREATE TABLE challenge (
   id serial4 primary key,
-  name varchar(255),
+  name TEXT,
   restaurant_id INT8 references restaurant(id),
-  info varchar(255),
-  deal varchar(255),
-  day varchar(255),
-  food_type varchar(255)
+  info TEXT,
+  deal TEXT,
+  day TEXT,
+  food_type TEXT
 );

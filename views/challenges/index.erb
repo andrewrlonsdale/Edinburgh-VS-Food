@@ -1,18 +1,34 @@
 <h1>challenges</h1>
-<p><a href="/challenges/new">New challenge</a></p>
 
-<% for challenge in @challenges %>
-<p>Name: <%= challenge.name()%></p>
 
-<p>restaurant: <a href = "restaurants/
-<%= challenge.restaurant["id"] %>">
- <%= challenge.restaurant["name"] %>
-</a></p> 
 
-<p>Deal: <%= challenge.deal()%> </p>
-<p>Day: <%= challenge.day() %></p>
-<p>Food type: <%= challenge.food_type() %></p>
-<p><a href="/challenges/<%= challenge.id %>" >Show challenge</a></p>
+
+<div class ="container">
+  <table style="width:100%">
+
+    <tr>
+
+    
+      <th>NAME</th>
+      <th>RESTAURANT</th> 
+      <th>DEAL</th>
+      <th>DAY</th>
+      <th>FOOD TYPE</th>
+    </tr>
+    <tr>
+      <% for challenge in @challenges %>
+      <td><%= challenge.name()%></td>
+      <td><a href = "restaurants/
+        <%= challenge.restaurant["id"] %>">
+        <%= challenge.restaurant["name"] %>
+      </a></td> 
+      <td><%= challenge.deal()%></td>
+      <td><%= challenge.day() %></td>
+      <td><%= challenge.food_type() %></td>
+      <td><a href="/challenges/<%= challenge.id %>" >Show challenge</a></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+<br>
 <hr>
-<% end %>
-

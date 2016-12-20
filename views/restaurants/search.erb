@@ -1,0 +1,22 @@
+<h1><%= @restaurant.name %> </h1>
+<div class ="container">
+  <table style="width:100%">
+
+    <tr>
+      <th>NAME</th> 
+      <th>DEAL</th>
+      <th>DAY</th>
+      <th>FOOD TYPE</th>
+    </tr>
+    <tr>
+      <% for challenge in @challenges %>
+      <td> <%= challenge.name %></td> 
+      <td><%= challenge.deal()%></td>
+      <td><%= challenge.day() %></td>
+      <td><%= challenge.food_type() %></td>
+      <td><a href="/challenges/<%= challenge.id %>" >Show challenge</a></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+

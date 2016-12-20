@@ -52,6 +52,14 @@ end
 # delete
 post '/challenges/:id/delete' do
   Challenge.destroy( params[:id])
-  redirect to ('/challenges')
+  erb(:"challenges/delete")
 end
+
+
+#  #search by restaurant
+#  post '/challenges/search' do
+#   @challenge = Challenge.search_by_restaurant_id(params[:restaurant_id])
+#   erb(:"challenges/searches/search")
+# end
+
 

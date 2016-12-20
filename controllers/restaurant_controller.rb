@@ -48,13 +48,15 @@ end
 # delete
 post '/restaurants/:id/delete' do
   Restaurant.destroy( params[:id])
-  redirect to ('/restaurants')
+  erb(:"restaurants/delete")
 end
 
+# show a challenge for a particular restaurant
 get '/restaurants/:id/challenges' do
   @restaurant = Restaurant.find(params[:id])
-  @burgers = @restaurant.burgers()
-  erb(:"restaurants/show")
+  @challenges = @restaurant.challenges()
+  erb(:"restaurants/search")
 end
+
 
 
