@@ -11,7 +11,7 @@ class Restaurant
     @website = options['website'].to_s
     @directions = options['directions'].to_s
     @number = options['number'].to_s
-  
+    
   end
 
   def challenges()

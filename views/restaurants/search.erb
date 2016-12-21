@@ -1,7 +1,6 @@
 <h1><%= @restaurant.name %> </h1>
-<div class ="container">
+  
   <table style="width:100%">
-
     <tr>
       <th>NAME</th> 
       <th>DEAL</th>
@@ -14,7 +13,7 @@
       <td><%= challenge.deal()%></td>
       <td><%= challenge.day() %></td>
       <td><%= challenge.food_type() %></td>
-      <td><a href="/challenges/<%= challenge.id %>" >Show challenge</a></td>
+      <td><a href="/challenges/<%= challenge.id %>" >SHOW CHALLENGE</a></td>
     </tr>
     <% end %>
   </table>

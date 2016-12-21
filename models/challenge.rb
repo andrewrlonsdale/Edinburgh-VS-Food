@@ -82,11 +82,7 @@ class Challenge
     return result
   end
 
-  def self.day_sort(day)
-    sql = "SELECT * FROM challenge WHERE day = #{day} "
-    food = SqlRunner.run(sql)
-    result = food.map{|challenge|Challenge.new(challenge)}
-  end
+  
 
 end
 

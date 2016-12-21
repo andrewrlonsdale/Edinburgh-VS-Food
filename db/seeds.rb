@@ -1,14 +1,11 @@
 require_relative('../models/challenge')
 require_relative('../models/restaurant')
 
-
-
-
 restaurant1 = Restaurant.new({
   "name" => "City Café",
   "location" => "19 Blair St, EH1 1QR",
   "website" => "www.citycafeedinburgh.co.uk",
-  "directions" => "/images/edinburgh.png",
+  "directions" => "/images/restaurant_map/citycafe1.png",
   "number" => "0131 220 0125"
   })
 
@@ -16,7 +13,7 @@ restaurant2 = Restaurant.new({
   "name" => "Taco Mazama",
   "location" => "38 Hanover St, EH2 2DR",
   "website" => "www.tacomazama.co.uk/",
-  "directions" => "",
+  "directions" => "/images/restaurant_map/tacomazamamap.jpeg",
   "number" => "0131 629 1892"
   })
 
@@ -24,16 +21,15 @@ restaurant3 = Restaurant.new({
   "name" => "Boozy Cow",
   "location" => "17 Frederick St, EH2 2EY",
   "website" => "www.boozycow.com/",
-  "directions" => "",
-  "number" => "0131 226 6055
-"
+  "directions" => "/images/restaurant_map/boozycowmap.png",
+  "number" => "0131 226 6055"
   })
 
 restaurant4 = Restaurant.new({
   "name" => "The Killer Restaurant",
   "location" => "4-8 Lochrin Buildings, EH3 9NB",
   "website" => "www.thekillerrestaurant.com/",
-  "directions" => "",
+  "directions" => "/images/restaurant_map/killerrestaurantmap.png",
   "number" => "0131 539 0999"
   })
 
@@ -41,7 +37,7 @@ restaurant5 = Restaurant.new({
   "name" => "STEAK",
   "location" => "14 Picardy Place, EH1 3JT",
   "website" => "www.steakedinburgh.com/",
-  "directions" => "",
+  "directions" => "/images/restaurant_map/steakmap.png",
   "number" => "0131 556 1289"
   })
 
@@ -49,7 +45,7 @@ restaurant6 = Restaurant.new({
   "name" => "The Other Place",
   "location" => "2-4 Broughton Road, EH7 4EB",
   "website" => "www.theotherplaceedinburgh.com",
-  "directions" => "",
+  "directions" => "/images/restaurant_map/otherplacemap.png",
   "number" => "0131 556 1024"
   })
 
@@ -57,7 +53,7 @@ restaurant7 = Restaurant.new({
   "name" => "Kismot",
   "location" => "29 St Leonards Street, EH8 9QN",
   "website" => "www.kismot.co.uk/",
-  "directions" => "",
+  "directions" => "/images/restaurant_map/kismotmap.jpg",
   "number" => "0131 667 0123"
   })
 
@@ -65,7 +61,7 @@ restaurant8 = Restaurant.new({
   "name" => "Three Sisters",
   "location" => "139 Cowgate, EH1 1JS",
   "website" => "www.thethreesistersbar.co.uk/",
-  "directions" => "",
+  "directions" => "/images/restaurant_map/threesistersmap.png",
   "number" => "0131 622 6802"
   })
 
@@ -73,16 +69,24 @@ restaurant9 = Restaurant.new({
   "name" => "Marys Milk Bar",
   "location" => "19 Grassmarket, EH1 2HS",
   "website" => "www.marysmilkbar.com/",
-  "directions" => "0131 226 8900",
-  "number" => ""
+  "directions" => "/images/restaurant_map/marysmilkbarmap.png",
+  "number" => "0131 226 8900"
   })
 
 restaurant10 = Restaurant.new({
   "name" => "Mccowans Brewhouse",
   "location" => "Fountain Park, EH11 1AF",
   "website" => "www.flaminggrillpubs.com/",
-  "directions" => "",
+  "directions" => "/images/restaurant_map/mcowanmap.png",
   "number" => "0131 228 8198"
+  })
+
+restaurant11 = Restaurant.new({
+  "name" => "Wings",
+  "location" => " 5 Old Fishmarket Close, EH1 1RW",
+  "website" => "www.wingsedinburgh.com/",
+  "directions" => "/images/restaurant_map/wingsmap.png",
+  "number" => "0131 629 1234"
   })
 
 restaurant1.save
@@ -95,13 +99,13 @@ restaurant7.save
 restaurant8.save
 restaurant9.save
 restaurant10.save
+restaurant11.save
 
 
 challenge1 = Challenge.new({
   "name" => "The Ultimate Burger Challenge",
   "restaurant_id" => restaurant1.id,
-  "info" => "This £30 burger features three homemade burgers, two marinated chicken breasts and two spicy bean burgers, topped off with two pineapple rings, bacon, mushrooms, gherkins, two types of cheese, guacamole and salad, all served in a plate-sized bun with a large portion of gourmet chips and coleslaw. If you can finish it off in 45 minutes your burger is free, you get a tshirt and your name goes on the wall of fame so everyone can bask in your glory. Those who try and fail the challenge do have to pay, of course, but they get a small prize to say well done for having a go.
-",
+  "info" => "This £30 burger features three homemade burgers, two marinated chicken breasts and two spicy bean burgers, topped off with two pineapple rings, bacon, mushrooms, gherkins, two types of cheese, guacamole and salad, all served in a plate-sized bun with a large portion of gourmet chips and coleslaw. If you can finish it off in 45 minutes your burger is free, you get a tshirt and your name goes on the wall of fame so everyone can bask in your glory. Those who try and fail the challenge do have to pay, of course, but they get a small prize to say well done for having a go.",
   "deal" => "Eat Free",
   "day" => "Monday",
   "food_type" => "Burger"
@@ -223,6 +227,16 @@ challenge12 = Challenge.new({
   "food_type" => "Burger"
   })
 
+challenge13 = Challenge.new({
+  "name" => "Suicide Challenge",
+  "restaurant_id" => restaurant11.id,
+  "info" => "Chicken specialists Wings offer up a menu of chicken wings in varying degrees of spiciness but if you’re feeling brave, you can also try their Suicide Challenge. It comprises six wings coated in their secret Suicide Sauce with no sour cream, and victors will secure a place on the ‘Wall of Flame’. But that’s not the only challenge: they’ve also brought in Armagedwing, a challenge so spicy that so far only three contenders have completed it to receive the prize of two free bowls of wings a day for life.
+The challenge is eat the six wings that have about 1.2 million skoville units of heat (a jalapeño is about 5,000)",
+  "deal" => "Wall Of Fame",
+  "day" => "Wednesday",
+  "food_type" => "Wings"
+  })
+
 challenge1.save
 challenge2.save
 challenge3.save
@@ -235,6 +249,7 @@ challenge9.save
 challenge10.save
 challenge11.save
 challenge12.save
+challenge13.save
 
 
 

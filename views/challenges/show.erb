@@ -1,27 +1,25 @@
-
 <h1><%= @challenge.name()%></h1>
 
-<div class = "container">
-  <div class = "details_container">
+<a href = "/restaurants/<%=@challenge.restaurant["id"]%>"><h2>
+  <%=@challenge.restaurant["name"]%></h2></a>
 
-    
-      <a href = "/restaurants/<%=@challenge.restaurant["id"]%>"><h2>
-        <%=@challenge.restaurant["name"]%></h2></a>
-        <br>
-       
-        
-        <h3><%=@challenge.info()%></h3>
-        <br>
-        <h3>DEAL: <%=@challenge.deal()%></h3>
-        <h3>DAY: <%=@challenge.day()%></h3>
-        <h3>FOOD TYPE: <%=@challenge.food_type()%></h3>
-        <br>
+  <br>
 
-        <form action="/challenges/<%= @challenge.id %>/edit" method="get">
-          <input type="submit" value="Edit challenge"/>
-        </form>
-        <form action="/challenges/<%= @challenge.id %>/delete" method="post">
-          <input type="submit" value="Delete"/>
-        </form>
-      </div>
-    </div>
+  <h3><%=@challenge.info()%></h3>
+
+  <br>
+
+  <h3>DEAL: <%=@challenge.deal()%></h3>
+  <h3>DAY: <%=@challenge.day()%></h3>
+  <h3>FOOD TYPE: <%=@challenge.food_type()%></h3>
+  
+  <br>
+
+  <form action="/challenges/<%= @challenge.id %>/edit" method="get">
+    <input type="submit" value="EDIT CHALLENGE"/>
+  </form>
+
+  <form action="/challenges/<%= @challenge.id %>/delete" method="post">
+    <input type="submit" value="DELETE"/>
+  </form>
+

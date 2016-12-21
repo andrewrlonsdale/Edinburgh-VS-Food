@@ -1,20 +1,26 @@
-<div class ="container">
 
-  <p>name: <%= @restaurant.name()%></p>
-  <br>
-  <p>location: <%= @restaurant.location()%></p>
-  <br>
-  <p>website:<a href = "http://<%= @restaurant.website()%>"><%= @restaurant.website() %></a></p>
-  <br>
-  <p>number: <%= @restaurant.number()%></p>
-  <br>
-  <p> <img src="<%= @restaurant.directions()%>"></p>
-  <br>
 
-  <a href="/restaurants/<%= @restaurant.id %>/edit">Edit restaurants</a>
+<h1><%= @restaurant.name()%></h1>
 
-  <form action="/restaurants/<%= @restaurant.id %>/delete" method="post">
-    <input type="submit" value="Delete"/>
-  </form>
+<h3> <%= @restaurant.location()%></h3>
+
+<a href = "http://<%= @restaurant.website()%>"><h3><%= @restaurant.website() %></h3></a>
+
+<h3><%= @restaurant.number()%></h3>
+
+<br>
+
+<p> <img src="<%= @restaurant.directions()%>"></p>
+
+<br>
+
+<form action="/restaurants/<%= @restaurant.id %>/edit" method="get">
+  <input type="submit" value="EDIT RESTAURANT"/>
+</form>
+
+<form action="/restaurants/<%= @restaurant.id %>/delete" method="post">
+  <input type="submit" value="DELETE"/>
+</form>
 
 </div>
+
