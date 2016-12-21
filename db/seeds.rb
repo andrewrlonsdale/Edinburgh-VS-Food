@@ -108,7 +108,8 @@ challenge1 = Challenge.new({
   "info" => "This £30 burger features three homemade burgers, two marinated chicken breasts and two spicy bean burgers, topped off with two pineapple rings, bacon, mushrooms, gherkins, two types of cheese, guacamole and salad, all served in a plate-sized bun with a large portion of gourmet chips and coleslaw. If you can finish it off in 45 minutes your burger is free, you get a tshirt and your name goes on the wall of fame so everyone can bask in your glory. Those who try and fail the challenge do have to pay, of course, but they get a small prize to say well done for having a go.",
   "deal" => "Eat Free",
   "day" => "Monday",
-  "food_type" => "Burger"
+  "food_type" => "Burger",
+  "picture" => "/images/challenge_images/citycafe.jpg"
   })
 
 
@@ -119,7 +120,8 @@ challenge2 = Challenge.new({
   "info" => "Burritos are often pretty hearty fare anyway but if youre feeling hungry Taco Mazama can provide you with a supersized triple burrito. If you can polish it off in ten minutes, youll get the £14.99 burrito for free and your photo on the wall. The fastest time at each Taco Mazama restaurant will then compete in a head-to-head eat-off at the end of the year to try and win a years free burritos. Get practising.",
   "deal" => "Eat Free",
   "day" => "Tuesday",
-  "food_type" => "Burrito"
+  "food_type" => "Burrito",
+  "picture" => "/images/challenge_images/tacomanzama.jpg"
   })
 
 challenge3 = Challenge.new({
@@ -128,7 +130,9 @@ challenge3 = Challenge.new({
   "info" => "This might seem fairly tame compared with some of the other challenges - its just one chilli cheese burger, one chilli cheese dog, one portion of chilli cheese fries and one Oero milkshake. But you have to consume it all within just 15 minutes. Succeed and its on Boozy Cow, fail and youre picking up the bill (which, as far as we can figure, is around £28). If you do make it through, youll get on the hall of fame but as of August 2015, more than 300 people had failed compared to just 85 who managed it.",
   "deal" => "Wall OF Fame",
   "day" => "Wednesday",
-  "food_type" => "Chilli"
+  "food_type" => "Chilli",
+  "picture" => "/images/challenge_images/boozycow.jpg"
+
   })
 
 
@@ -138,7 +142,8 @@ challenge4 = Challenge.new({
   "info" => "Its one of the worlds hottest curries, and its now got its own restaurant. Formerly located at the Kismot, the Killer Curry has long been popular for those looking for a challenge – and it has even led to people being admitted to hospital. The £19.95 Killer Curry can be served as either a chicken, lamb or vegetarian dish and if you finish it your curry is free and youll end up on the wall of fame. But think carefully being deciding to take it on as theres a hall of shame for those who couldnt handle it. Not to mention a trip to A&E.",
   "deal" => "Wall OF Fame",
   "day" => "Thursday",
-  "food_type" => "Curry"
+  "food_type" => "Curry",
+  "picture" => "/images/challenge_images/killercurry.jpg"
   })
 
 
@@ -148,7 +153,8 @@ challenge5 = Challenge.new({
   "info" => "Do you love steak, lots and lots of steak? You do? Well this is the challenge for you. After youve signed the contract absolving the restaurant of liability from any health issues you might experience, STEAK will serve you up a 92 oz rump steak with five sides and three sauces. You have one hour to demolish the slab of meat, sides and sauces if you want the £160 challenge struck from the bill, a t-shirt and your picture on display in the restaurants reception.",
   "deal" => "Eat Free",
   "day" => "Friday",
-  "food_type" => "Steak"
+  "food_type" => "Steak",
+  "picture" => "/images/challenge_images/manvssteak.jpg"
   })
 
 
@@ -156,11 +162,12 @@ challenge6 = Challenge.new({
   "name" => "The Other Challenge",
   "restaurant_id" => restaurant6.id,
   "info" => "A triple chilli cheese burger with a side of chilli cheese fries and onions rings is what awaits you at The Other Place in Canonmills.
-The Other Challenge will cost you £20, but if you can clear your plate within the 20 minute time limit its on the house along with any drinks bought during the challenge.
-You even get your picture up on the wall for unquestionable bragging rites",
+  The Other Challenge will cost you £20, but if you can clear your plate within the 20 minute time limit its on the house along with any drinks bought during the challenge.
+  You even get your picture up on the wall for unquestionable bragging rites",
   "deal" => "Wall Of Fame",
   "day" => "Monday",
-  "food_type" => "Burger"
+  "food_type" => "Burger",
+  "picture" => "/images/challenge_images/other-challenge.jpg"
   })
 
 
@@ -168,23 +175,25 @@ challenge7 = Challenge.new({
   "name" => "The Kismot Killer",
   "restaurant_id" => restaurant7.id,
   "info" => "Dont be surprised if this one sounds familiar: back in 2011 two people ended up in hospital after trying to finish this ultra spicy curry from The Kismot.
-This is the only challenge on the list that doesnt have a time limit, but you will need to sign a disclaimer for this one too.
-With a secret mix of some of the hottest chillies on the planet Kismot claims this may be the hottest curry on the planet.
-If you can handle the heat and wolf down the Killer along with rice and nan, you get the £19.95 meal for free.",
+  This is the only challenge on the list that doesnt have a time limit, but you will need to sign a disclaimer for this one too.
+  With a secret mix of some of the hottest chillies on the planet Kismot claims this may be the hottest curry on the planet.
+  If you can handle the heat and wolf down the Killer along with rice and nan, you get the £19.95 meal for free.",
   "deal" => "Eat Free",
   "day" => "Tuesday",
-  "food_type" => "Curry"
+  "food_type" => "Curry",
+  "picture" => "/images/challenge_images/kismotkiller.jpg"
   })
 
 challenge8 = Challenge.new({
   "name" => "man plank",
   "restaurant_id" => restaurant8.id,
   "info" => "Served on a giant wooden plank, the pub are setting the level at a minimum of six men.
-The challenge consists of burgers, nachos, chicken wings, racks of ribs, samosas and vegetable pakoras.
-Whether its a hangover cure or simply an excuse to overindulge, tables must be booked in advance and the challenge costs £22.50 per person",
+  The challenge consists of burgers, nachos, chicken wings, racks of ribs, samosas and vegetable pakoras.
+  Whether its a hangover cure or simply an excuse to overindulge, tables must be booked in advance and the challenge costs £22.50 per person",
   "deal" => "Eat Free",
   "day" => "Saturday",
-  "food_type" => "Mix"
+  "food_type" => "Mix",
+  "picture" => "/images/challenge_images/manplank.jpg"
   })
 
 
@@ -192,11 +201,12 @@ challenge9 = Challenge.new({
   "name" => "freeze",
   "restaurant_id" => restaurant9.id,
   "info" => "For sweet-toothed challengers, you can feel the freeze at Marys Milk Bar in the Grassmarket.
-Mary serves up a challenge cup with seven scoopfuls of flavoured ice cream. You can select your own flavours and the sundae cup costs £10.
-This one is just for fun, but one ice cold fan has set a record of demolishing the cup in two minutes 36 seconds.",
+  Mary serves up a challenge cup with seven scoopfuls of flavoured ice cream. You can select your own flavours and the sundae cup costs £10.
+  This one is just for fun, but one ice cold fan has set a record of demolishing the cup in two minutes 36 seconds.",
   "deal" => "Wall Of Fame",
   "day" => "Sunday",
-  "food_type" => "Ice Cream"
+  "food_type" => "Ice Cream",
+  "picture" => "/images/challenge_images/marysmilkbar.jpg"
   })
 
 challenge10 = Challenge.new({
@@ -205,7 +215,8 @@ challenge10 = Challenge.new({
   "info" => "If you love steak, then prove it. Youve got to take on • A butterflied rib-eye on the bone • Served on sizzling onions • Mushrooms • Grilled tomato • Peas • Onion rings. With a giant heap of chips to finish off",
   "deal" => "Wall Of Fame",
   "day" => "Monday",
-  "food_type" => "Steak"
+  "food_type" => "Steak",
+  "picture" => "/images/challenge_images/bulls-head-steakflaming.png"
   })
 
 challenge11 = Challenge.new({
@@ -214,7 +225,8 @@ challenge11 = Challenge.new({
   "info" => "WARNING: This dish will leave your mouth on fire • Flaming hot Naga chilli chicken curry • HOT HOT HOT! pulled pork burger • HOT HOT HOT! chicken wings. Served with rice, chips and sour cream. Good luck with this one!",
   "deal" => "Wall Of Fame",
   "day" => "Tuesday",
-  "food_type" => "Mix"
+  "food_type" => "Mix",
+  "picture" => "/images/challenge_images/hot-hot-hotflaming.png"
   })
 
 
@@ -224,17 +236,19 @@ challenge12 = Challenge.new({
   "info" => "Man, The Myth, The Mighty Flaming Challenge Burger – the ultimate meat treat! Stacked high on a brioche bun, youll find • 4 flame-grilled 6oz beef burgers • Southern fried chicken fillet • BBQ pulled pork • Cheese slices • Crispy bacon • Onions. Topped with onion rings and with a giant heap of skinny fries!",
   "deal" => "Wall Of Fame",
   "day" => "Wednesday",
-  "food_type" => "Burger"
+  "food_type" => "Burger",
+  "picture" => "/images/challenge_images/burgerflaminggrill.jpg"
   })
 
 challenge13 = Challenge.new({
   "name" => "Suicide Challenge",
   "restaurant_id" => restaurant11.id,
   "info" => "Chicken specialists Wings offer up a menu of chicken wings in varying degrees of spiciness but if you’re feeling brave, you can also try their Suicide Challenge. It comprises six wings coated in their secret Suicide Sauce with no sour cream, and victors will secure a place on the ‘Wall of Flame’. But that’s not the only challenge: they’ve also brought in Armagedwing, a challenge so spicy that so far only three contenders have completed it to receive the prize of two free bowls of wings a day for life.
-The challenge is eat the six wings that have about 1.2 million skoville units of heat (a jalapeño is about 5,000)",
+  The challenge is eat the six wings that have about 1.2 million skoville units of heat (a jalapeño is about 5,000)",
   "deal" => "Wall Of Fame",
   "day" => "Wednesday",
-  "food_type" => "Wings"
+  "food_type" => "Wings",
+  "picture" => "/images/challenge_images/wings1.jpg"
   })
 
 challenge1.save

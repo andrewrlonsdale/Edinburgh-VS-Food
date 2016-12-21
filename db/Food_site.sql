@@ -18,5 +18,6 @@ CREATE TABLE challenge (
   info TEXT,
   deal TEXT,
   day TEXT,
-  food_type TEXT
+  food_type TEXT,
+  picture TEXT
 );

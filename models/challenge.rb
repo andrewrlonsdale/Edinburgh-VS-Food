@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Challenge
 
-  attr_accessor( :name, :restaurant_idea, :info, :deal, :day, :food_type )
+  attr_accessor( :name, :restaurant_idea, :info, :deal, :day, :food_type, :picture )
   attr_reader :id 
 
   def initialize( options )
@@ -13,12 +13,13 @@ class Challenge
     @deal = options['deal'].to_s
     @day = options['day'].to_s
     @food_type = options['food_type'].to_s
+    @picture = options['picture'].to_s
   end
 
   def save()
     sql = "INSERT INTO challenge (
-    name, restaurant_id, info,deal,day,food_type ) VALUES 
-    ('#{ @name }', #{@restaurant_id},'#{ @info }','#{ @deal }','#{ @day }','#{@food_type}') 
+    name, restaurant_id, info,deal,day,food_type,picture ) VALUES 
+    ('#{ @name }', #{@restaurant_id},'#{ @info }','#{ @deal }','#{ @day }','#{@food_type}','#{@picture}') 
     RETURNING *"
     food_data = SqlRunner.run(sql)
     @id = food_data.first()['id'].to_i
@@ -47,6 +48,7 @@ class Challenge
     deal='#{options['deal']}',
     day='#{options['day']}',
     food_type='#{options['food_type']}'
+    picture='#{options['picture']}'
     WHERE id='#{options['id']}'"
     SqlRunner.run( sql )
   end
