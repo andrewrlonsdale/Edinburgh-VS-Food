@@ -1,0 +1,9 @@
+dropdb challenges
+
+createdb challenges
+
+psql -d challenges -f db/Food_site.sql
+
+ruby db/seeds.rb  
+
+ruby app.rb       

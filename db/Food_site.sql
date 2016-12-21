@@ -14,7 +14,7 @@ CREATE TABLE restaurant (
 CREATE TABLE challenge (
   id serial4 primary key,
   name TEXT,
-  restaurant_id INT8 references restaurant(id),
+  restaurant_id INT8 references restaurant(id) On DELETE CASCADE,
   info TEXT,
   deal TEXT,
   day TEXT,
